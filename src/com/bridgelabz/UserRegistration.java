@@ -35,7 +35,6 @@ public class UserRegistration {
             System.out.println("Valid mobile number");
         else
             System.out.println("Invalid mobile number");
-
         
         System.out.println("Enter password ");
         String password = sc.next();
