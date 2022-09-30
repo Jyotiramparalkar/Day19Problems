@@ -9,22 +9,25 @@ public class UserInputValidation {
     private Pattern pattern;
     private Matcher matcher;
 
-    public boolean isFirstNameValid(String firstName){
+    public boolean isFirstNameValid(String firstName)
+    {
         String regex = "[A-Z][a-z]{2,}";
         pattern = Pattern.compile(regex);
         matcher = pattern.matcher(firstName);
         return matcher.matches();
     }
 
-    public boolean isLastNameValid(String lastName){
+    public boolean isLastNameValid(String lastName)
+    {
         String regex = "[A-Z][a-z]{2,}";
         pattern = Pattern.compile(regex);
         matcher = pattern.matcher(lastName);
         return matcher.matches();
     }
 
-    public boolean isEmailValid(String email){
-        String regex = "[a-z0-9.]+@[a-z]+.[a-z]{2,3}(.[a-z]{2,})*";
+    public boolean isEmailValid(String email)
+    {
+        String regex = "^[^.][A-Za-z0-9.+-]+[^.]@[a-z0-9]+([.][a-z]{2,3})([.][a-z]{2,3})?$";
         pattern = Pattern.compile(regex);
         matcher = pattern.matcher(email);
         return matcher.matches();
@@ -46,5 +49,6 @@ public class UserInputValidation {
         matcher = pattern.matcher(password);
         return matcher.matches();
     }
+
 
 }
